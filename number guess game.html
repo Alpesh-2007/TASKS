@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Guess Number Game</title>
+</head>
+
+<body>
+
+    <script>
+
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+
+        console.log("Random Number:", randomNumber);
+
+
+        let tries = 0;
+
+
+        for (; ;)
+         {
+
+            let userNumber = Number(prompt("Enter a number between 1 and 100:"));
+            tries++;
+
+            if (userNumber === randomNumber) {
+                alert(
+                    "Correct! The random number was " +
+                    randomNumber +
+                    ". You guessed it in " +
+                    tries +
+                    " tries."
+                );
+
+                break;
+
+            }
+
+            else {
+                alert("Wrong number! Try again.");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
